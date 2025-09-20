@@ -1,7 +1,4 @@
 import abstractClasses.ListModel;
-import models.ImageListModel;
-import models.ParagraphListModel;
-import models.PostListModel;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.io.FileWriter;
