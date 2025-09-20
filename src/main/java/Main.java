@@ -40,6 +40,8 @@ public class Main {
         try (FileWriter wrt = new FileWriter(filePath)) {
             wrt.write(jsonString);
         }
+
+
         catch (IOException e) {
             System.out.println("\nFile name/directory error!\n");
         }
