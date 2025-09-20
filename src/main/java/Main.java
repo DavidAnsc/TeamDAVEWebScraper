@@ -1,9 +1,10 @@
+import java.util.ArrayList;
+
 import abstractClasses.ListModel;
 import models.ImageListModel;
 import models.ParagraphListModel;
 import models.PostListModel;
-
-import java.util.ArrayList;
+import java.util.Scanner;
 
 
 public class Main {
@@ -23,5 +24,11 @@ public class Main {
         // write data:::::::
         writeData.write(listModels);
         //           :::::::
+        
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Pls enter a string: ");
+        String value = sc.nextLine();
+        System.out.println(value);
     }
 }

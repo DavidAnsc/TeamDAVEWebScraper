@@ -1,0 +1,19 @@
+{
+	"name": "xcode build server",
+	"version": "0.2",
+	"bspVersion": "2.0",
+	"languages": [
+		"c",
+		"cpp",
+		"objective-c",
+		"objective-cpp",
+		"swift"
+	],
+	"argv": [
+		"/opt/homebrew/bin/xcode-build-server"
+	],
+	"workspace": "/Users/david_an/Documents/coding projects active/TeamDAVEWebScraper/TeamDAVEWebScraper.xcodeproj/project.xcworkspace",
+	"build_root": "/Users/david_an/Library/Developer/Xcode/DerivedData/TeamDAVEWebScraper-cjrnmdltvqbazednkmqwkrjfzqrb",
+	"scheme": "TeamDAVEWebScraper",
+	"kind": "xcode"
+}
