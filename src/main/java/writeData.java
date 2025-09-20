@@ -9,10 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class writeData {
-    public static void write(ParagraphListModel paragraphListModel,
-                             PostListModel postListModel,
-                             ImageListModel imageListModel,
-                             ArrayList<ListModel> listModels) {
+    public static void write(ArrayList<ListModel> listModels) {
 
         Gson gson = new GsonBuilder()
                 .setPrettyPrinting()

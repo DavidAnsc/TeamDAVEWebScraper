@@ -15,10 +15,7 @@ public class PostListModel implements ListModel {
 
     public void getPosts(Elements postItems, PostListModel postListModel) {
         for (Element post : postItems) {
-            int index2 = -1;
-
             for (Element item : post.select("p")) {
-                index2 ++;
                 PostModel postTemp = new PostModel(item.text());
 
                 postListModel.postList.add(postTemp);

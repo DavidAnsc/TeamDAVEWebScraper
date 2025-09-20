@@ -21,7 +21,7 @@ public class Main {
 
 
         // write data:::::::
-        writeData.write(paragraphListModel, postListModel, imageListModel, listModels);
+        writeData.write(listModels);
         //           :::::::
     }
 }
