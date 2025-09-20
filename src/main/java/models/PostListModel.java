@@ -1,6 +1,7 @@
 package models;
 import abstractClasses.ListModel;
-
+import org.jsoup.nodes.Element;
+import org.jsoup.select.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -10,5 +11,18 @@ public class PostListModel implements ListModel {
     @Override
     public String toString() {
         return Arrays.toString(this.postList.toArray());
+    }
+
+    public void getPosts(Elements postItems, PostListModel postListModel) {
+        for (Element post : postItems) {
+            int index2 = -1;
+
+            for (Element item : post.select("p")) {
+                index2 ++;
+                PostModel postTemp = new PostModel(item.text());
+
+                postListModel.postList.add(postTemp);
+            }
+        }
     }
 }
