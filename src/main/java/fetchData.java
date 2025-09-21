@@ -1,4 +1,7 @@
-import models.*;
+import models.listModels.ImageListModel;
+import models.listModels.ParagraphListModel;
+import models.listModels.PostListModel;
+
 import org.jsoup.*;
 import org.jsoup.nodes.*;
 import org.jsoup.select.*;

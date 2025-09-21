@@ -1,5 +1,7 @@
-package models;
+package models.listModels;
 import abstractClasses.ListModel;
+import models.ParagraphModel;
+
 import org.jsoup.nodes.*;
 import org.jsoup.select.*;
 import java.util.ArrayList;

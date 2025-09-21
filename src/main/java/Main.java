@@ -1,9 +1,10 @@
 import java.util.ArrayList;
 
 import abstractClasses.ListModel;
-import models.ImageListModel;
-import models.ParagraphListModel;
-import models.PostListModel;
+import models.listModels.ImageListModel;
+import models.listModels.ParagraphListModel;
+import models.listModels.PostListModel;
+
 import java.util.Scanner;
 
 
@@ -20,7 +21,7 @@ public class Main {
         fetchData.fetch(paragraphListModel, postListModel, imageListModel);
         //           :::::::
 
-
+        
         // write data:::::::
         writeData.write(listModels);
         //           :::::::
