@@ -1,21 +1,24 @@
-import java.util.ArrayList;
-
-import abstractClasses.ListModel;
 import models.listModels.ImageListModel;
 import models.listModels.ParagraphListModel;
 import models.listModels.PostListModel;
+import models.ParagraphModel;
+import models.ImageModel;
+import models.PostModel;
 
-import java.util.Scanner;
-
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
+        DataWriter<ParagraphModel> dataWriterPara = new DataWriter();
+        DataWriter<ImageModel> dataWriterImage = new DataWriter();
+        DataWriter<PostModel> dataWriterPost = new DataWriter();
+
         ParagraphListModel paragraphListModel = new ParagraphListModel();
         PostListModel postListModel = new PostListModel();
         ImageListModel imageListModel = new ImageListModel();
 
-        ArrayList<ListModel> listModels = new ArrayList<>();
-        listModels.add(paragraphListModel); listModels.add(postListModel); listModels.add(imageListModel);
+
+        // listModels.add(paragraphListModel); listModels.add(postListModel); listModels.add(imageListModel);
 
         // fetch data:::::::
         fetchData.fetch(paragraphListModel, postListModel, imageListModel);
@@ -23,13 +26,10 @@ public class Main {
 
         
         // write data:::::::
-        writeData.write(listModels);
+        dataWriterPara.write(paragraphListModel.paraList, paragraphListModel);
+        dataWriterImage.write(imageListModel.imageList, imageListModel);
+        dataWriterPost.write(postListModel.postList, postListModel);
         //           :::::::
         
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Pls enter a string: ");
-        String value = sc.nextLine();
-        System.out.println(value);
     }
 }

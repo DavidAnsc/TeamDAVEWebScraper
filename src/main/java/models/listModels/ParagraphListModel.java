@@ -16,6 +16,10 @@ public class ParagraphListModel implements ListModel {
         return Arrays.toString(this.paraList.toArray());
     }
 
+    @Override
+    public String toText() {
+        return "Paragraph";
+    }
 
     public void getPara(Elements paraItems, ParagraphListModel paragraphListModel) {
         for (Element paragraph : paraItems) {

@@ -5,16 +5,16 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class writeData {
-    public static void write(ArrayList<ListModel> listModels) {
+public class DataWriter<T> {
+    public void write(ArrayList<T> array, ListModel listmodel) {
 
         Gson gson = new GsonBuilder()
                 .setPrettyPrinting()
                 .create();
 
-        String jsonString = gson.toJson(listModels);
+        String jsonString = gson.toJson(array);
 
-        String filePath = "outputFolder/scrapedData.json";
+        String filePath = "TeamDAVEWebScraper/scraped" + listmodel.toText() + "Data.json";
 
         try (FileWriter wrt = new FileWriter(filePath)) {
             wrt.write(jsonString);
@@ -28,4 +28,9 @@ public class writeData {
 
 
     }
+
+    public DataWriter() {
+    }
+
+    
 }

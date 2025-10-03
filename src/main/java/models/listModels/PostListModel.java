@@ -15,6 +15,11 @@ public class PostListModel implements ListModel {
         return Arrays.toString(this.postList.toArray());
     }
 
+    @Override
+    public String toText() {
+        return "Post";
+    }
+
     public void getPosts(Elements postItems, PostListModel postListModel) {
         for (Element post : postItems) {
             for (Element item : post.select("p")) {
