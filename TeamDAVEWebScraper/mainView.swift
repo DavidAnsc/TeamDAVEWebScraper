@@ -24,11 +24,6 @@ struct mainView: View {
 						ProgressView("loading...")
 					}
 				}
-				
-				
-				
-				
-				
 			}
         }
         
